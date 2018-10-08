@@ -1,0 +1,214 @@
+/* ==================
+ *  VARIABLES
+ * ================== */
+:root {
+  --white: #fff;
+  --yellow: #ffe147;
+  --black: #2e2e2e;
+  --green: #287342;
+  --orange: #ED6234;
+}
+
+/* ==================
+ *  BASE
+ * ================== */
+body {
+  font-family: 'Hi Melody', cursive;
+}
+
+#app {
+  height: 100vh;
+  background: var(--yellow);
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.outer-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ==================
+ *  APP
+ * ================== */
+.inner-container {
+  border-radius: 0.3rem;
+  padding: 1.5rem;
+  margin-top: 8%;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  background: #4a4a4a;
+  color: white;
+  padding: 1rem;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.checkbox-label {
+  position: relative;
+  font-size: 20px;
+  display: flex;
+}
+
+.text-wrap {
+  position: relative;
+}
+
+.text {
+  font-size: 2em;
+}
+
+.text>i.fa {
+  font-size: 0.6em;
+  width: 20px;
+  text-align: center;
+}
+
+label {
+  cursor: pointer;
+}
+
+.strike-through {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: 20px;
+  width: 0;
+  background: var(--green);
+  opacity: .4;
+  transition: width .35s ease-in-out, opacity .25s ease-in-out;
+  transform: skewX(-10deg);
+}
+
+.strike-through.active {
+  width: 100%;
+}
+
+button {
+  margin-top: 3rem;
+  text-transform: uppercase;
+  border: 1px solid var(--white);
+  color: var(--white);
+  padding: 0.5rem;
+  text-align: center;
+  transition-duration: 0.4s;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--black);
+  font-family: 'Hi Melody', cursive;
+  background: white;
+}
+
+button:hover {
+  border-color: var(--orange);
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* ==================
+*  CHECKBOX
+*  (by CodePen: Glen Cheney - Pure CSS custom checkboxes)
+* ================== */
+/* Hide our input checkbox */
+.checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Checkbox */
+.checkbox+label:before {
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  margin-top: 8px;
+}
+
+.checkbox:checked+label:before {
+  background: var(--green);
+}
+
+.checkbox:hover:not(:checked)+label:before {
+  background: var(--green);
+  transition: background 0.3s;
+  opacity: 0.3;
+}
+
+/* Checkmark */
+.checkbox:checked+label:after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-top: 8px;
+}
+
+/* ==================
+*  SOCIAL MEDIA
+* ================== */
+.social-media-footer {
+  --font-color: hsl(50.2, 100%, 25%);
+  --font-size: 0.8rem;
+}
+
+.social-columns {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.9375rem;
+  padding-bottom: 0.625rem;
+  font-size: var(--font-size);
+  color: var(--font-color);
+  width: 100%;
+}
+
+.social-columns .column {
+  padding: 0.4rem;
+  text-align: center;
+}
+
+.social-columns a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.social-columns a:hover {
+  text-decoration: underline;
+}
+
+/* GITHUB */
+.github-code {
+  color: var(--font-color);
+  font-size: var(--font-size);
+  text-align: center;
+  margin-bottom: 0.625rem;
+}
+
+.github-code a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.github-code a:hover {
+  text-decoration: underline;
+}
