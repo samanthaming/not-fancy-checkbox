@@ -51,7 +51,7 @@ Let's look at the basic HTML. Nothing too fancy here, we're just using the input
   </label>
 ```
 
-# 2. Handle the Vue method and Update data
+# 2. Implement Vue logic
 
 Now let's write the logic when user clicks the check box. All that method is doing is updating that specific item's active key to either true or false.
 
