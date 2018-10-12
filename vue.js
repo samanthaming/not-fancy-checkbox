@@ -40,9 +40,8 @@ new Vue({
     ]
   },
   methods: {
-    onCheck(id) {
-      const selectedItem = this.items.find(item => item.id === id);
-      selectedItem.active = !selectedItem.active;
+    onCheck(item) {
+      item.active = !item.active
     },
     uncheckAll() {
       this.items.forEach(item => {

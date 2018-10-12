@@ -38,7 +38,7 @@ Let's look at the basic HTML. Nothing too fancy here, we're just using the input
 >
   <input
     type="checkbox"
-    @change="onCheck(item.id)"
+    @change="onCheck(item)"
   >
   <label 
     :for="`checkbox${item.id}`"
@@ -68,14 +68,19 @@ new Vue({
     ]
   },
   methods: {
-    onCheck(id) {
+    onCheck(item) {
       
-      // Let's find the item that was clicked
-      const selectedItem = this.items
+      // Let's change the active value of the clicked item 
+      //  to be the opposite of what it is
+      item.id = !item.id
+      
+      /* You don't need to do this:
+        
+        const selectedItem = this.items
         .find(item => item.id === id);
         
-      // Here we will change the active value to the opposite of what it is
-      selectedItem.active = !selectedItem.active;
+        selectedItem.active = !selectedItem.active;
+      */
     }
   }
 })
